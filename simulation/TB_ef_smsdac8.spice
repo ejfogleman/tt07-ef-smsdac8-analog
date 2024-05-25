@@ -1,0 +1,59 @@
+* ef_smsdac8 encoder+ladder simulation
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+* https://sourceforge.net/p/ngspice/ngspice/ci/master/tree/examples/xspice/verilator/
+
+* The digital portion of the circuit is specified in compiled Verilog.
+* list the inputs and outputs in same order as verilog def
+adut [ clk rst_b en_enc en_dith d7 d6 d5 d4 d3 d2 d1 d0 ] [y81 y80 y41 y40 y21 y20 y11 y10] null dut
+.model dut d_cosim simulation="./ef_smsdac8_top.so"
+
+* connect the driver to the ladder
+* netlisted the instantiated dac; commented out the instance, and end statements
+* .include "../xschem/simulation/TB_ef_smsdac8_ladder.spice" 
+
+* from extraction
+* .include "../magic/ef_smsdac8_ladder_flat.spice"
+.include "../magic/ef_smsdac8_ladder.spice"
+
+xladder vdac vdd gnd y81 y80 y41 y40 y21 y20 y11 y10 ef_smsdac8_ladder
+
+
+**** End of the ADC and its subcircuits.  Begin test circuit ****
+
+* VCC is a special ngspice param for L2V level
+.param VCC=1.0
+
+* cap load
+c_load vdac gnd 680p
+
+* supply
+v_vdd vdd gnd {VCC}
+
+* clock 
+* PULSE ( V1 V2 TD TR TF PW PER NP )
+v_clk clk gnd PULSE ( 0 {VCC} 0n 100p 100p 50n 100n )
+
+* reset
+v_rst_b rst_b 0 PWL ( 0 0 10n 0 10.1n {VCC})
+
+* controls
+v_en_enc en_enc 0 {VCC}
+v_en_dith en_dith 0 {VCC}
+
+* data / set to 0x7F
+r7 d7 gnd 10k
+r6 d6 vdd 10k
+r5 d5 vdd 10k
+r4 d4 vdd 10k
+r3 d3 vdd 10k
+r2 d2 vdd 10k
+r1 d1 vdd 10k
+r0 d0 vdd 10k
+
+.save all
+
+.control
+tran 1n 100u
+plot vdac
+.endc
+.end

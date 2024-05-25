@@ -1,0 +1,67 @@
+** sch_path: /home/ejf/Dropbox/Projects/Research_OSIC/TT/tt07-ef-smsdac8-analog/xschem/TB_ef_smsdac8_ladder.sch
+**.subckt TB_ef_smsdac8_ladder
+* xladder VDAC VPWR GND y4[1] y1[1] y4[0] y2[0] y2[1] y8[0] y1[0] y8[1] ef_smsdac8_ladder
+**.ends
+
+* expanding   symbol:  ef_smsdac8_ladder.sym # of pins=11
+** sym_path: /home/ejf/Dropbox/Projects/Research_OSIC/TT/tt07-ef-smsdac8-analog/xschem/ef_smsdac8_ladder.sym
+** sch_path: /home/ejf/Dropbox/Projects/Research_OSIC/TT/tt07-ef-smsdac8-analog/xschem/ef_smsdac8_ladder.sch
+.subckt ef_smsdac8_ladder vdac vdd gnd i_x4[1] i_x1[1] i_x4[0] i_x2[0] i_x2[1] i_x8[0] i_x1[0] i_x8[1]
+*.iopin vdd
+*.opin vdac
+*.ipin i_x8[1]
+*.iopin gnd
+*.ipin i_x8[0]
+*.ipin i_x4[1]
+*.ipin i_x4[0]
+*.ipin i_x2[1]
+*.ipin i_x2[0]
+*.ipin i_x1[1]
+*.ipin i_x1[0]
+XR1 net2 net1 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR2 net1 net4 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR3 i_x8[1] net3 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR4 net3 net2 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR6 net6 net5 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR7 net5 net4 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR8 i_x8[0] net7 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR9 net7 net6 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR11 net8 net4 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR12 net10 net9 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR13 net9 net4 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR14 gnd net11 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR15 net11 net10 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR16 net13 net12 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR17 net12 net4 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR18 vdd net14 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR19 net14 net13 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR5 net16 net15 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR10 net15 net8 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR20 i_x4[1] net17 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR21 net17 net16 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR22 net19 net18 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR23 net18 net8 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR24 i_x4[0] net20 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR25 net20 net19 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR26 net21 net8 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR27 net23 net22 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR28 net22 net21 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR29 i_x2[1] net24 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR30 net24 net23 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR31 net26 net25 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR32 net25 net21 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR33 i_x2[0] net27 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR34 net27 net26 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR35 vdac net21 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR36 net29 net28 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR37 net28 vdac gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR38 i_x1[1] net30 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR39 net30 net29 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR40 net32 net31 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR41 net31 vdac gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR42 i_x1[0] net33 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+XR43 net33 net32 gnd sky130_fd_pr__res_high_po_0p35 L=10 mult=1 m=1
+.ends
+
+*.GLOBAL GND
+*.end

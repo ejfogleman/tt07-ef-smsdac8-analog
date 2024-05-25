@@ -1,0 +1,29 @@
+* NGSPICE file created from ef_smsdac8_ladder.ext - technology: sky130A
+.subckt ef_smsdac8_ladder vdac vdd gnd i_x4[1] i_x1[1] i_x4[0] i_x2[0] i_x2[1] i_x8[0] i_x1[0] i_x8[1]
+X0 m1_1652_n4006# i_x4[1] gnd sky130_fd_pr__res_high_po_0p35 l=20
+X1 m1_988_610# vdd gnd sky130_fd_pr__res_high_po_0p35 l=20
+X2 m1_1652_n4006# i_x4[0] gnd sky130_fd_pr__res_high_po_0p35 l=20
+X3 m1_1652_n4006# m1_2648_n4006# gnd sky130_fd_pr__res_high_po_0p35 l=20
+X4 m1_988_610# m1_1652_n4006# gnd sky130_fd_pr__res_high_po_0p35 l=20
+X5 m1_988_610# m1_1652_n4006# gnd sky130_fd_pr__res_high_po_0p35 l=20
+X6 m1_2648_n4006# vdac gnd sky130_fd_pr__res_high_po_0p35 l=20
+X7 m1_2648_n4006# vdac gnd sky130_fd_pr__res_high_po_0p35 l=20
+X8 m1_988_610# i_x8[1] gnd sky130_fd_pr__res_high_po_0p35 l=20
+X9 gnd gnd gnd sky130_fd_pr__res_high_po_0p35 l=20
+X10 gnd gnd gnd sky130_fd_pr__res_high_po_0p35 l=20
+X11 gnd gnd gnd sky130_fd_pr__res_high_po_0p35 l=20
+X12 m1_1652_n4006# m1_2648_n4006# gnd sky130_fd_pr__res_high_po_0p35 l=20
+X13 m1_988_610# i_x8[0] gnd sky130_fd_pr__res_high_po_0p35 l=20
+X14 m1_2648_n4006# vdac gnd sky130_fd_pr__res_high_po_0p35 l=20
+X15 m1_2648_n4006# i_x2[0] gnd sky130_fd_pr__res_high_po_0p35 l=20
+X16 m1_1652_n4006# m1_2648_n4006# gnd sky130_fd_pr__res_high_po_0p35 l=20
+X17 m1_988_610# gnd gnd sky130_fd_pr__res_high_po_0p35 l=20
+X18 m1_988_610# m1_1652_n4006# gnd sky130_fd_pr__res_high_po_0p35 l=20
+X19 m1_2648_n4006# vdac gnd sky130_fd_pr__res_high_po_0p35 l=20
+X20 m1_1652_n4006# m1_2648_n4006# gnd sky130_fd_pr__res_high_po_0p35 l=20
+X21 m1_2648_n4006# i_x2[1] gnd sky130_fd_pr__res_high_po_0p35 l=20
+X22 m1_988_610# m1_1652_n4006# gnd sky130_fd_pr__res_high_po_0p35 l=20
+X23 vdac i_x1[1] gnd sky130_fd_pr__res_high_po_0p35 l=20
+X24 vdac i_x1[0] gnd sky130_fd_pr__res_high_po_0p35 l=20
+X25 gnd gnd gnd sky130_fd_pr__res_high_po_0p35 l=20
+.ends
